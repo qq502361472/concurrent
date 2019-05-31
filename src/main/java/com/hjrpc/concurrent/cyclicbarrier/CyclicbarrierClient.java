@@ -1,4 +1,4 @@
-package concurrent.cyclicbarrier;
+package com.hjrpc.concurrent.cyclicbarrier;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

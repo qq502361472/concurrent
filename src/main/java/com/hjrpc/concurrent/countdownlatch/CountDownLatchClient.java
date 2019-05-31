@@ -1,10 +1,8 @@
-package concurrent.countdownlatch;
+package com.hjrpc.concurrent.countdownlatch;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
-import java.util.concurrent.BrokenBarrierException;
-import java.util.concurrent.CountDownLatch;
 
 /**
  * ClassName: CountDownLatchClient <br/>

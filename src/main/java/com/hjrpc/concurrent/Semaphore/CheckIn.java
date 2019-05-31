@@ -1,9 +1,7 @@
-package concurrent.Semaphore;
+package com.hjrpc.concurrent.Semaphore;
 
 import java.util.Random;
 import java.util.concurrent.Semaphore;
-
-import static javafx.scene.input.KeyCode.R;
 
 /**
  * ClassName: CheckIn <br/>
@@ -21,6 +19,9 @@ public class CheckIn implements Runnable{
 
         try {
             semaphore.acquire();
+            int queueLength = semaphore.getQueueLength();
+            System.out.println("等待队列长度"+queueLength);
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
