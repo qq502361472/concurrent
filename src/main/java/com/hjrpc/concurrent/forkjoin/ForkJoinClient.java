@@ -1,9 +1,8 @@
-package com.hjrpc.forkjoin;
+package com.hjrpc.concurrent.forkjoin;
 
 import java.io.File;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
-import java.util.concurrent.TimeUnit;
 
 public class ForkJoinClient {
     public static void main(String[] args) throws InterruptedException {

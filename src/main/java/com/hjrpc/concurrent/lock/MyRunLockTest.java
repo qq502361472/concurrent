@@ -1,4 +1,4 @@
-package com.hjrpc.lock;
+package com.hjrpc.concurrent.lock;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

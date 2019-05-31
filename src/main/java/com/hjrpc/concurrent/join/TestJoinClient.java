@@ -1,4 +1,4 @@
-package com.hjrpc.join;
+package com.hjrpc.concurrent.join;
 
 public class TestJoinClient {
 

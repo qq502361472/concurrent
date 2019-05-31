@@ -1,4 +1,4 @@
-package com.hjrpc;
+package com.hjrpc.concurrent;
 
 public class ExpressClient {
     private static Express express = new Express(10, "BeiJing");

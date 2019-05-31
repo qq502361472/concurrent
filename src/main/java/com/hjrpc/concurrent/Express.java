@@ -1,4 +1,4 @@
-package com.hjrpc;
+package com.hjrpc.concurrent;
 
 public class Express {
     private static int distance = 0;

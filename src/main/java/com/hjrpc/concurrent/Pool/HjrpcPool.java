@@ -1,4 +1,4 @@
-package com.hjrpc.Pool;
+package com.hjrpc.concurrent.Pool;
 
 import java.sql.Connection;
 import java.util.LinkedList;

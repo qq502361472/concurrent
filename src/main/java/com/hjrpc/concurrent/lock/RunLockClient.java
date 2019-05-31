@@ -1,4 +1,4 @@
-package com.hjrpc.lock;
+package com.hjrpc.concurrent.lock;
 
 public class RunLockClient {
     public static void main(String[] args) {

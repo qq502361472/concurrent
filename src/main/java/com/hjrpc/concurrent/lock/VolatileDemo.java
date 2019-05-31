@@ -1,4 +1,4 @@
-package com.hjrpc.lock;
+package com.hjrpc.concurrent.lock;
 
 public class VolatileDemo implements Runnable{
     private  int a = 1;

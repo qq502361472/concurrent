@@ -1,6 +1,4 @@
-package com.hjrpc.join;
-
-import jdk.nashorn.internal.objects.annotations.Setter;
+package com.hjrpc.concurrent.join;
 
 public class JoinTestDemo implements Runnable {
     private Thread lastThread ;
