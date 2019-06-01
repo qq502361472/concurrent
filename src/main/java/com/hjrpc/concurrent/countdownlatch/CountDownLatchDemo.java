@@ -1,4 +1,4 @@
-package com.hjrpc.concurrent;
+package com.hjrpc.concurrent.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
 

@@ -1,4 +1,4 @@
-package com.hjrpc.concurrent;
+package com.hjrpc.concurrent.waitnotify;
 
 public class ExpressClient {
     private static Express express = new Express(10, "BeiJing");

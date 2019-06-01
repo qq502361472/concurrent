@@ -1,4 +1,4 @@
-package com.hjrpc.concurrent;
+package com.hjrpc.concurrent.waitnotify;
 
 public class Express {
     private static int distance = 0;
