@@ -1,13 +1,13 @@
-package com.hjrpc.concurrent.Pool;
+package com.hjrpc.concurrent.Semaphore;
+
+import com.hjrpc.concurrent.Pool.HjrpcPool;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@SuppressWarnings("ALL")
-public class PoolClient {
-    @SuppressWarnings("AlibabaConstantFieldShouldBeUpperCase")
+public class SemaphorePoolClient {
     private static final int threadCount = 50;
     private static final int times = 20;
 
@@ -16,15 +16,16 @@ public class PoolClient {
 
     public static void main(String[] args) throws SQLException {
 
-        final HjrpcPool hjrpcPool = new HjrpcPool(10);
+        final SemaphorePool semaphorePool = new SemaphorePool(10);
 
         final CountDownLatch countDownLatch = new CountDownLatch(threadCount);
 
         for (int i = 0; i < threadCount; i++) {
             new Thread(new Runnable() {
+                @Override
                 public void run() {
                     for (int j = 0; j < times; j++) {
-                        Connection connection = hjrpcPool.getConnection(1000L);
+                        Connection connection = semaphorePool.getConnection(100L);
                         if (connection == null) {
                             notgotCount.incrementAndGet();
                         } else {
@@ -32,7 +33,7 @@ public class PoolClient {
                             try {
                                 connection.createStatement();
                                 connection.commit();
-                                hjrpcPool.relaseConnection(connection);
+                                semaphorePool.relaseConnection(connection);
                             } catch (SQLException e) {
                                 e.printStackTrace();
                             }
