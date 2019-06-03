@@ -10,8 +10,7 @@ public class AtomicRefrenceClient {
     public static void main(String[] args) {
 
         for (int i = 0; i < 50; i++) {
-            new Thread(new Runnable() {
-                public void run() {
+            new Thread(()-> {
                     referenceUser.set(user);
                     User user2 = new User("李四", 15);
                     User user3 = new User("王五", 10);
@@ -20,7 +19,6 @@ public class AtomicRefrenceClient {
                     boolean b = referenceUser.compareAndSet(user2, user3);
                     System.out.println(b);
                     System.out.println(referenceUser.get());
-                }
             }).start();
         }
     }
