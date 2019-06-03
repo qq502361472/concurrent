@@ -22,7 +22,6 @@ public class PoolClient {
 
         for (int i = 0; i < threadCount; i++) {
             new Thread(new Runnable() {
-                @Override
                 public void run() {
                     for (int j = 0; j < times; j++) {
                         Connection connection = hjrpcPool.getConnection(1000L);
