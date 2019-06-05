@@ -2,7 +2,7 @@ package com.hjrpc.concurrent.cas;
 
 import java.util.concurrent.atomic.AtomicReference;
 
-public class AtomicRefrenceClient {
+public class AtomicReferenceClient {
 
     private static AtomicReference<User> referenceUser = new AtomicReference<>();
     private static User user = new User("张三", 18);
