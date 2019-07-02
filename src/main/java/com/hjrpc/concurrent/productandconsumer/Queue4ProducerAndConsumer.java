@@ -10,8 +10,7 @@ public class Queue4ProducerAndConsumer {
     public Consumer consumer = new Consumer();
     public Random random = new Random();
 
-    public Queue4ProducerAndConsumer(BlockingQueue<Integer> queue){
-        this.queue = queue;
+    public Queue4ProducerAndConsumer(){
     }
 
     class Producer implements Runnable{
@@ -37,17 +36,19 @@ public class Queue4ProducerAndConsumer {
     class Consumer implements Runnable{
         @Override
         public void run() {
-            try {
-                Integer take = queue.take();
-                System.out.println("consumer consume num:"+take);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            for (;;) {
+                try {
+                    Integer take = queue.take();
+                    System.out.println("consumer consume num:" + take);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
-            try {
-                Thread.sleep(random.nextInt(1000));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                try {
+                    Thread.sleep(random.nextInt(1000));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
