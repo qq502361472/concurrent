@@ -1,13 +1,11 @@
-package com.hjrpc.concurrent.Cache;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
+package com.hjrpc.concurrent.cache;
 
 public class TestMyCache {
 
     public static void main(String[] args) {
+
+        int i1 = Runtime.getRuntime().availableProcessors();
+        System.out.println("当前机器CPU核心数量："+i1);
 
         Cache<String, String> cache = new Cache<>();
 
