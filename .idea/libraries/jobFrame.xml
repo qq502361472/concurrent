@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jobFrame">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/reource/jobFrame.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
