@@ -26,7 +26,6 @@ public class ParallerQstService {
                 System.out.println("题目["+questionId+"]在缓存中,且未被更新");
                 return new MakeDocTaskResultVo(cacheVo);
             }else{
-                System.out.println("题目["+questionId+"]在缓存中,但已经被更新");
                 return new MakeDocTaskResultVo(getFuture(questionId));
             }
         }else{
@@ -67,6 +66,7 @@ public class ParallerQstService {
                 cachedMap.put(questionId,cacheVo);
                 return cacheVo;
             } finally {
+                //防止再次更新此题目
                 processingMap.remove(questionId);
             }
         }
